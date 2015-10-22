@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    #WRAPPERS
+\*------------------------------------*/
+
+.wrapper {
+    height: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-right: $spacing-unit--small;
+    padding-left:  $spacing-unit--small;
+
+    @include media-query(lap-and-up) {
+        padding-right: $spacing-unit;
+        padding-left:  $spacing-unit;;
+    }
+}
+
+.wrapper--image-map-types {
+    padding: 0;
+}

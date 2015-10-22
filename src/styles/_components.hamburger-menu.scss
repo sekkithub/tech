@@ -1,0 +1,53 @@
+/* =======================
+   Components/Hamburger Menu
+   ======================= */
+
+.hamburger-menu {
+    cursor: pointer;
+    float: right;
+    height: 36px;
+    margin: 16px 0;
+    transform: rotate(0);
+    transition: .5s ease-in-out;
+    width: 36px;
+
+    &.open span:nth-child(1) {
+        top: 18px;
+        transform: rotate(135deg);
+    }
+    
+    &.open span:nth-child(2) {
+        opacity: 0;
+        left: 15px;
+    }
+    
+    &.open span:nth-child(3) {
+        top: 18px;
+        transform: rotate(-135deg);
+    }
+}
+
+    .hamburger-menu span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: $color-white;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+
+        &:nth-child(1) {
+            top: 7px;
+        }
+        
+        &:nth-child(2) {
+            top: 17px;
+        }
+        
+        &:nth-child(3) {
+            top: 27px;
+        }
+    }

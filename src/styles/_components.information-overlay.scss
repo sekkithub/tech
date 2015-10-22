@@ -1,0 +1,23 @@
+/* =======================
+   Components/Information Overlay
+   ======================= */
+.information-overlay {
+    color: black;
+    display: block;
+    position: fixed;
+    height: 100%;
+    min-height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    overflow-y: scroll;
+    transition: $base-transition;
+    visibility: hidden;
+    width: 100%;
+    z-index: $z-index-level-4;
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+}

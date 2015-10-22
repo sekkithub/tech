@@ -1,0 +1,28 @@
+# THE NEIGHBOURHOOD STATIC SITE FRONT-END FRAMEWORK .gitignore
+#
+_site
+
+
+# MISC FILES
+# ------------------------------------------------------------
+.DS_Store
+Thumbs.db
+.cache
+.project
+.settings
+.tmproj
+*.esproj
+nbproject
+*.sublime-workspace
+*.sublime-project
+*.komodoproject
+.komodotools
+_notes
+dwsync.xml
+logs/*
+.sass-cache/
+node_modules/
+fabfile.pyc
+ai-cache/
+.idea/
+phpinfo.php

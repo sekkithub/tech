@@ -1,0 +1,49 @@
+/* =======================
+   Components/Site Nav
+   ======================= */
+.site-nav {
+}
+
+    .site-nav__home {
+        line-height: $header-height;
+    }
+    
+    .site-nav__list {
+        background: #1C1C1C;
+        list-style: none;
+        height: 100%;
+        margin: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        transition: all 0.5s ease;
+        transform: translate3d(100%, 0, 0) rotateY(0deg);
+        transform-origin: 100% 50%;
+        transform-style: preserve-3d;
+        width: 300px;
+        visibility: visible;
+        z-index: 100;
+    }
+
+        .site-nav__item {
+            display: table;
+            height: 60px;
+            padding: 0 $spacing-unit--small;
+            transition: 200ms all ease;
+            width: 100%;
+
+            &:hover {
+                background: #333;
+            }
+        }
+
+            .site-nav__link {
+                color: $color-white;
+                display: table-cell;
+                vertical-align: middle;
+                text-transform: uppercase;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }

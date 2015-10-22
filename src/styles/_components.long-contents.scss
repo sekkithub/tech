@@ -1,0 +1,14 @@
+/* =======================
+   Components/Long Contents
+   ======================= */
+
+.long-contents {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding-left: $spacing-unit;
+    padding-right: $spacing-unit;
+    padding-top: $spacing-unit * 3;
+    padding-bottom: $spacing-unit * 3;
+}

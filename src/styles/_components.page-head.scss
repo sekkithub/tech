@@ -1,0 +1,16 @@
+/* =======================
+   Components/Page Head
+   ======================= */
+.page-head {
+    position: fixed;
+    width: 100%;
+    height: $header-height;
+    z-index: $z-index-level-7;
+    transition: $base-transition;
+    top: 0;
+
+    &.hide {
+        top: -70px;
+    }
+
+}

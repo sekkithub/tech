@@ -1,0 +1,21 @@
+/* =======================
+   Components/Background Color
+   ======================= */
+
+.filter {
+    background: $color-black;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    transition: $base-transition;
+    width: 100%;
+    visibility: hidden;
+    z-index: $z-index-level-6;
+
+    &.on {
+        visibility: visible;
+        opacity: 0.5;
+    }
+}

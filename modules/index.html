@@ -1,0 +1,17 @@
+---
+layout: default
+type: modules
+handle: modules
+---
+<ul class="layout  modules">
+    {% for module in site.posts %}<li class="layout__item  u-1/2-lap-and-up  modules__list">
+        {% if module.type == 'module' %}
+            <a href="{{site.baseurl}}{{module.url}}" class="modules__link">
+                <figure class="modules__figure">
+                    <figcaption class="modules__title">{{module.title}}</figcaption>
+                    <img src="/assets/images/thumbnails/{{module.handle}}.jpg" class="modules__image" />
+                </figure>
+            </a>
+        {% endif %}
+    </li>{% endfor %}
+</ul>

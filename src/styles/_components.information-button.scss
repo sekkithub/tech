@@ -1,0 +1,67 @@
+/* =======================
+   Components/Information Button
+   ======================= */
+$info-button-size: 36px;
+
+.information-button {
+    position: fixed;
+    width: $info-button-size;
+    height: $info-button-size;
+    right: $spacing-unit;
+    bottom: $spacing-unit;
+    cursor: pointer;
+    transition: $base-transition;
+    z-index: $z-index-level-5;
+
+    &.hide {
+        bottom: -70px;
+    }
+
+    &.on .information-button__wrapper {
+        transform: rotateY(90deg);
+    }
+
+    &:not(.on) .information-button__wrapper {
+        transform: rotateY(0deg);
+    }
+}
+
+    .information-button__wrapper {
+        height: $info-button-size;
+        position: absolute;
+        transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
+        transform: rotate(0, 0);
+        transform-style: preserve-3d;
+        width: $info-button-size;
+    }
+
+        .information-icon {
+            border: 2px solid $color-white;
+            height: $info-button-size;
+            position: absolute;
+            width: $info-button-size;
+
+            &:after {
+                background: url("/assets/svgs/information-icons.svg") no-repeat $info-button-size $info-button-size;
+                content: "";
+                height: 100%;
+                left: 0px;
+                position: absolute;
+                top: 0px;
+                width: 100%;
+            }
+
+            &.information-icon--i {
+                transform: rotateY(0deg) translateZ($info-button-size/2 - 2);
+                &:after {
+                    background-position: 9px 7px;
+                }
+            }
+
+            &.information-icon--close {
+                transform: rotateY(-90deg) translateZ($info-button-size/2 - 2);
+                &:after {
+                    background-position: 9px -24px;
+                }
+            }
+        }

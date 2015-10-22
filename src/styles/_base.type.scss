@@ -1,0 +1,102 @@
+/* =======================
+   Base/Type
+   ======================= */
+
+/**
+ * Typographical base selectors.
+ */
+
+/**
+ * Headings 1–6.
+ */
+@include headings() {
+    @include font-weight(regular);
+}
+
+
+
+
+
+/**
+ * A generic heading style which can be applied to any headings.
+ */
+.heading {
+    @include font-size(22px);
+}
+
+.heading-sub {
+    @include font-size(16px);
+    @include font-weight(bold);
+    margin-bottom: 0;
+}
+
+
+
+
+
+/**
+ * Emboldened elements.
+ */
+a,
+strong, b,
+dt {
+    @include font-weight(bold);
+}
+
+
+
+
+
+/**
+ * Code-like elements.
+ */
+code, kbd, samp {
+    font-family: Inconsolata, Monaco, Consolas, "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+}
+
+pre {
+    white-space: pre;
+    word-wrap: normal;
+    overflow: auto;
+    padding: $spacing-unit--small;
+    border-radius: $base-round;
+}
+
+
+
+
+
+/**
+ * Horizontal rules.
+ */
+hr {
+    border: none;
+    border-bottom: 1px solid $color-black;
+    margin-bottom: $spacing-unit - 1px;
+}
+
+
+
+/**
+ * Highlighted text.
+ */
+mark {
+
+    pre & {
+        background: none;
+        border-bottom: 1px solid;
+        color: inherit;
+    }
+
+}
+
+
+
+
+
+/**
+ * Text-alignment.
+ */
+.text-banner {
+    text-align: center;
+}

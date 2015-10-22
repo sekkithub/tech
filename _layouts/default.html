@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    {% include head.html %}
+    <body>
+        <!-- Pre-loader -->
+        <div class="pre-loader">
+            <div class="pre-loader__wrapper"></div>
+            <div class="pre-loader__section  bg-color--{{page.handle}}"></div>
+        </div>
+
+        {% include header.html %}
+
+        <!-- Main Nav -->
+        <ul class="site-nav__list">
+            <li class="site-nav__item"><a class="[ site-nav__link ]" href="{{ site.baseurl }}/">Home</a></li>
+            <li class="site-nav__item"><a class="[ site-nav__link ]" href="{{ site.baseurl }}/modules">Modules</a></li>
+        </ul>
+
+        <!-- Next & Prev arrows for post page -->
+        {% if page.previous.url %}
+            <div class="page-link  page-link--left">
+                <a class="page-link__prev" href="{{page.previous.url}}">
+                    <img src="/assets/svgs/arrow.svg" class="arrow  arrow--prev" />
+                    <span class="page-link__title  page-link__title--left">{{page.previous.title}}</span>
+                </a>
+            </div>
+        {% endif %}
+        {% if page.next.url %}
+            <div class="page-link  page-link--right">
+                <a class="page-link__next" href="{{page.next.url}}">
+                    <span class="page-link__title  page-link__title--right">{{page.next.title}}</span>
+                    <img src="/assets/svgs/arrow.svg" class="arrow arrow--next" />
+                </a>
+            </div>
+        {% endif %}
+
+        <!-- Overlay while main nav opens -->
+        <div class="filter"></div>
+
+        <!-- Main Contents -->
+        <div class="container  container--{{page.handle}}  bg-color--{{page.handle}}">
+            {{ content }}
+        </div>
+
+        {% if page.path contains '_posts' %}
+            <div class="controller-switch">
+                <div class="controller-switch__text"><span class="controller-switch__state">Hide</span> UI</div>
+            </div>
+            <div class="information-button">
+                <div class="information-button__wrapper">
+                    <div class="information-icon  information-icon--i"></div>
+                    <div class="information-icon  information-icon--close"></div>
+                </div>
+            </div>
+        {% endif %}
+        {% include page-info.html %}
+        {% include footer.html %}
+    </body>
+</html>

@@ -1,0 +1,44 @@
+/* =======================
+   Components/Magnify
+   ======================= */
+.magnify {
+    cursor: inherit;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    @include media-query(lap-and-up) {
+        cursor: none;
+    }
+}
+
+    .magnify__large-image {
+        background: url('/assets/images/kampus-icon.jpg') no-repeat;
+        border-radius: 100%;
+        box-shadow: 0 0 0 3px rgba(255, 255, 255, 1);
+        display: none;
+        height: 240px;
+        position: absolute;
+        width: 240px;
+    
+        @include media-query(palm) {
+            display: none !important;
+            opacity: 0 !important;
+        }
+    }
+    
+    .magnify__small-image {
+        display: none;
+    
+        @include media-query(lap-and-up) {
+            display: block;
+        }
+    }
+    
+    .magnify__mobile {
+        display: block;
+    
+        @include media-query(lap-and-up) {
+            display: none;
+        }
+    }

@@ -1,0 +1,64 @@
+/* =======================
+   Components/Page Link
+   ======================= */
+
+.page-link {
+    margin-top: -35px;
+    position: fixed;
+    top: 50%;
+    z-index: $z-index-level-2;
+    transition: $base-transition;
+}
+
+.page-link--left {
+    left: $spacing-unit;
+
+    &.hide {
+        transform: translateX(-160px)
+    }
+}
+
+.page-link--right {
+    right: $spacing-unit;
+
+    &.hide {
+        transform: translateX(160px)
+    }
+}
+
+    .page-link__prev, .page-link__next {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    .page-link__prev:hover > .arrow--prev {
+        transform: translateX(-10px) rotate(180deg);
+    } 
+
+    .page-link__next:hover > .arrow--next {
+        transform: translateX(10px);
+    } 
+
+
+    .page-link__title {
+        color: $color-white;
+        display: inline-block;
+        line-height: 1.2;
+        max-width: 160px;
+        transition: $base-transition;
+        vertical-align: middle;
+        opacity: 0;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    .page-link__title--left {
+        transform: translateX(-200px);
+    }
+
+    .page-link__title--right {
+        transform: translateX(200px);
+    }

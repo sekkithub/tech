@@ -1,0 +1,18 @@
+/* =======================
+   Components/Controller Switch
+   ======================= */
+.controller-switch {
+    bottom: $spacing-unit;
+    color: $color-white;
+    cursor: pointer;
+    font-weight: 600;
+    left: $spacing-unit;
+    position: fixed;
+    transition: $base-transition;
+    user-select: none;
+    z-index: $z-index-level-4;
+
+    &.switch-off {
+        opacity: 0.5;
+    }
+}

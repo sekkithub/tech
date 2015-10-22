@@ -1,0 +1,36 @@
+/* =======================
+   Components/Container
+   ======================= */
+
+.container {
+    background: $base-background-color;
+    height: auto;
+    min-height: 100%;
+    overflow-y: scroll;
+    padding-top: $spacing-unit--large * 1.5;
+    padding-bottom: $spacing-unit--large * 1.5;
+    position: relative;
+    transition: $base-transition;
+    width: 100%;
+    z-index: $z-index-level-1;
+}
+
+.container--home {
+    height: 100%;
+}
+
+.container--modules {
+}
+
+.container--magnify-lens {
+    height: 100%;
+}
+
+.container--select-box {
+    height: 100%;
+}
+
+.container--image-map-types {
+    height: 100%;
+    padding: 0;
+}

@@ -1,0 +1,24 @@
+/* =======================
+   Components/Arrow
+   ======================= */
+.arrow {
+    height: 70px;
+}
+
+
+.arrow--prev {
+    transform: rotate(180deg);
+    transition: $base-transition;
+
+    &:hover {
+        transform: translateX(-10px) rotate(180deg);
+    }
+}
+
+.arrow--next {
+    transition: $base-transition;
+
+    &:hover {
+        transform: translateX(10px);
+    }
+}
