@@ -54,7 +54,7 @@
   },
   "dependencies": {
     "fastclick": "^1.0.6",
-    "jquery": "^2.1.4",
+    "jquery": "^3.0.0",
     "leaflet": "^0.7.5",
     "velocity-animate": "^1.2.3"
   }
